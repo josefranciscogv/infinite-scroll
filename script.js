@@ -32,7 +32,6 @@ function setAttributes(element, attributes) {
 function displayPhotos(){
     imagesLoaded = 0;
     totalImages = photosArray.length;
-    console.log('total images', totalImages);
 
     photosArray.forEach((photo) =>{
         //Create <a> to link Unsplash
@@ -43,7 +42,7 @@ function displayPhotos(){
         });
         //Create <img> for photo
         const img = document.createElement('img');
-        setAttributes(item,{
+        setAttributes(img,{
             src: photo.urls.regular,
             alt: photo.alt_description,
             title: photo.alt_description,
